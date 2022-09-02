@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: otic-test-app
+  name: otic-test-app
+  namespace: sdran
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: otic-test-app
+  template:
+    metadata:
+      annotations:
+        proxy.onosproject.org/inject: "true"
+      labels:
+        app: otic-test-app
+    spec:
+      containers:
+      - image: otic-test-app:dev
+        name: otic-test-app
+        command:
+        - pause
+        resources:
+          limits:
+            cpu: 100m
+            memory: 256Mi

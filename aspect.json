@@ -1,0 +1,241 @@
+{
+  "serviceModels": {
+    "1.3.6.1.4.1.53148.1.1.2.3": {
+      "oid": "1.3.6.1.4.1.53148.1.1.2.3",
+      "name": "ORAN-E2SM-RC",
+      "ranFunctions": [
+        {
+          "@type": "type.googleapis.com/onos.topo.RCRanFunction",
+          "reportStyles": [
+            {
+              "name": "Call Process Outcome",
+              "type": 2,
+              "ranParameters": [
+                {
+                  "id": 1,
+                  "name": "Current UE ID"
+                },
+                {
+                  "id": 21001,
+                  "name": "S-NSSAI"
+                },
+                {
+                  "id": 21002,
+                  "name": "SST"
+                },
+                {
+                  "id": 21003,
+                  "name": "SD"
+                },
+                {
+                  "id": 27108,
+                  "name": "Best Neighboring Cell"
+                },
+                {
+                  "id": 21528,
+                  "name": "List of Neighbor cells"
+                },
+                {
+                  "id": 10102,
+                  "name": "Cell Results"
+                },
+                {
+                  "id": 10103,
+                  "name": "SSB Results"
+                },
+                {
+                  "id": 12501,
+                  "name": "RSRP"
+                },
+                {
+                  "id": 12502,
+                  "name": "RSRQ"
+                },
+                {
+                  "id": 12503,
+                  "name": "SINR"
+                }
+              ]
+            },
+            {
+              "name": "E2 Node information",
+              "type": 3
+            }
+          ],
+          "insertStyles": [
+            {
+              "name": "Connected Mode Mobility Control Request",
+              "type": 3,
+              "insertIndications": [
+                {
+                  "id": 1,
+                  "name": "Handover Control Request",
+                  "ranParameters": [
+                    {
+                      "id": 1,
+                      "name": "Target Primary Cell ID"
+                    },
+                    {
+                      "id": 2,
+                      "name": "Target Cell"
+                    },
+                    {
+                      "id": 3,
+                      "name": "NR Cell"
+                    },
+                    {
+                      "id": 4,
+                      "name": "NR CGI"
+                    },
+                    {
+                      "id": 7,
+                      "name": "List of PDU sessions for handover"
+                    },
+                    {
+                      "id": 13,
+                      "name": "List of DRBs for handover"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "eventTriggerStyles": [
+            {
+              "name": "Call Process Breakpoint",
+              "type": 2,
+              "formatType": 2
+            },
+            {
+              "name": "E2 Node Information",
+              "type": 3,
+              "formatType": 3
+            }
+          ],
+          "policyStyles": [
+            {
+              "name": "Connected Mobile Mobility",
+              "type": 3
+            }
+          ],
+          "controlStyles": [
+            {
+              "name": "PCI Control",
+              "type": 9,
+              "headerFormatType": 1,
+              "messageFormatType": 1,
+              "controlOutcomeFormatType": 1,
+              "controlActions": [
+                {
+                  "id": 1,
+                  "name": "PCI Control",
+                  "ranParameters": [
+                    {
+                      "id": 1,
+                      "name": "Serving Cell NR PCI"
+                    },
+                    {
+                      "id": 2,
+                      "name": "Serving Cell CGI"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ranFunctionIDs": [
+        6
+      ]
+    },
+    "1.3.6.1.4.1.53148.1.2.2.100": {
+      "oid": "1.3.6.1.4.1.53148.1.2.2.100",
+      "name": "ORAN-E2SM-RC-PRE",
+      "ranFunctions": [
+        {
+          "@type": "type.googleapis.com/onos.topo.RCRanFunction",
+          "reportStyles": [
+            {
+              "name": "PCI and NRT update for eNB",
+              "type": 1
+            }
+          ]
+        }
+      ],
+      "ranFunctionIDs": [
+        3
+      ]
+    },
+    "1.3.6.1.4.1.53148.1.2.2.101": {
+      "oid": "1.3.6.1.4.1.53148.1.2.2.101",
+      "name": "ORAN-E2SM-MHO",
+      "ranFunctions": [
+        {
+          "@type": "type.googleapis.com/onos.topo.MHORanFunction",
+          "reportStyles": [
+            {
+              "name": "PCI and NRT update for eNB",
+              "type": 1
+            }
+          ]
+        }
+      ],
+      "ranFunctionIDs": [
+        5
+      ]
+    },
+    "1.3.6.1.4.1.53148.1.2.2.2": {
+      "oid": "1.3.6.1.4.1.53148.1.2.2.2",
+      "name": "ORAN-E2SM-KPM",
+      "ranFunctions": [
+        {
+          "@type": "type.googleapis.com/onos.topo.KPMRanFunction",
+          "reportStyles": [
+            {
+              "name": "Periodic Report",
+              "type": 1,
+              "measurements": [
+                {
+                  "id": "value:1",
+                  "name": "RRC.ConnEstabAtt.Sum"
+                },
+                {
+                  "id": "value:2",
+                  "name": "RRC.ConnEstabSucc.Sum"
+                },
+                {
+                  "id": "value:3",
+                  "name": "RRC.ConnReEstabAtt.Sum"
+                },
+                {
+                  "id": "value:4",
+                  "name": "RRC.ConnReEstabAtt.reconfigFail"
+                },
+                {
+                  "id": "value:5",
+                  "name": "RRC.ConnReEstabAtt.HOFail"
+                },
+                {
+                  "id": "value:6",
+                  "name": "RRC.ConnReEstabAtt.Other"
+                },
+                {
+                  "id": "value:7",
+                  "name": "RRC.Conn.Avg"
+                },
+                {
+                  "id": "value:8",
+                  "name": "RRC.Conn.Max"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "ranFunctionIDs": [
+        4
+      ]
+    }
+  }
+}
